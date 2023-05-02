@@ -24,7 +24,7 @@
     justify-content: center;
 }
 
-#button 
+.button 
 {
     position: relative;
     background: #444;
@@ -38,7 +38,7 @@
     transition: 0.5s;
 }
 
-#button:hover
+.button:hover
 {
     letter-spacing: 0.25em;
     background: var(--clr);
@@ -46,7 +46,7 @@
     box-shadow: 0 0 35px var(--clr);
 }
 
-#button::before
+.button::before
 {
     content: '';
     position: absolute;
@@ -54,20 +54,20 @@
     background: #100f10;
 }
 
-#button span
+.button span
 {
     position: relative;
     z-index: 1;
 }
 
-#button i
+.button i
 {
     position: absolute;
     inset: 0;
     display: block;
 }
 
-#button i::before
+.button i::before
 {
     content: '';
     position: absolute;
@@ -81,13 +81,13 @@
     transition: 0.5s;
 }
 
-#button:hover i::before
+.button:hover i::before
 {
    width: 20px; 
    left: 20%;
 }
 
-#button i::after
+.button i::after
 {
     content: '';
     position: absolute;
@@ -101,10 +101,18 @@
     transition: 0.5s;
 }
 
-#button:hover i::after
+.button:hover i::after
 {
    width: 20px; 
    left: 80%;
+}
+
+#indicator_home
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
 }
 
 /* ===================== HOME DESIGN ===================== */

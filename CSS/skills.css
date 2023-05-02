@@ -49,7 +49,6 @@ nav ul
     justify-content: center;
     flex-wrap: wrap;
 }
-
 /* ===================== NAVIGATION BAR ===================== */
 .container_navbar
 {
@@ -59,7 +58,7 @@ nav ul
     justify-content: center;
 }
 
-#button 
+.button 
 {
     position: relative;
     background: #444;
@@ -73,7 +72,7 @@ nav ul
     transition: 0.5s;
 }
 
-#button:hover
+.button:hover
 {
     letter-spacing: 0.25em;
     background: var(--clr);
@@ -81,28 +80,28 @@ nav ul
     box-shadow: 0 0 35px var(--clr);
 }
 
-#button::before
+.button::before
 {
     content: '';
     position: absolute;
     inset: 2px;
-    background: #17072b;
+    background: #100f10;
 }
 
-#button span
+.button span
 {
     position: relative;
     z-index: 1;
 }
 
-#button i
+.button i
 {
     position: absolute;
     inset: 0;
     display: block;
 }
 
-#button i::before
+.button i::before
 {
     content: '';
     position: absolute;
@@ -111,18 +110,18 @@ nav ul
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
 
-#button:hover i::before
+.button:hover i::before
 {
    width: 20px; 
    left: 20%;
 }
 
-#button i::after
+.button i::after
 {
     content: '';
     position: absolute;
@@ -131,15 +130,23 @@ nav ul
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
 
-#button:hover i::after
+.button:hover i::after
 {
    width: 20px; 
    left: 80%;
+}
+
+#indicator_home
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
 }
 
 /* ===================== HOME DESIGN ===================== */

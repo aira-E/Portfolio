@@ -15,7 +15,6 @@
     font-family: body;
     src: url(../media/fonts/Nunito-VariableFont_wght.ttf);
 }
-
 /* ===================== NAVIGATION BAR ===================== */
 .container_navbar
 {
@@ -25,7 +24,7 @@
     justify-content: center;
 }
 
-#button 
+.button 
 {
     position: relative;
     background: #444;
@@ -36,9 +35,10 @@
     font-family: headings;
     letter-spacing: 0.1em;
     padding: 10px 30px;
+    transition: 0.5s;
 }
 
-#button:hover
+.button:hover
 {
     letter-spacing: 0.25em;
     background: var(--clr);
@@ -46,28 +46,28 @@
     box-shadow: 0 0 35px var(--clr);
 }
 
-#button::before
+.button::before
 {
     content: '';
     position: absolute;
     inset: 2px;
-    background: #17072b;
+    background: #100f10;
 }
 
-#button span
+.button span
 {
     position: relative;
     z-index: 1;
 }
 
-#button i
+.button i
 {
     position: absolute;
     inset: 0;
     display: block;
 }
 
-#button i::before
+.button i::before
 {
     content: '';
     position: absolute;
@@ -76,18 +76,18 @@
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
 
-#button:hover i::before
+.button:hover i::before
 {
    width: 20px; 
    left: 20%;
 }
 
-#button i::after
+.button i::after
 {
     content: '';
     position: absolute;
@@ -96,22 +96,29 @@
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
 
-#button:hover i::after
+.button:hover i::after
 {
    width: 20px; 
    left: 80%;
 }
 
+#indicator_home
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
 /* ===================== NAVIGATION BAR OF SAMPLES ===================== */
 nav{
 	position: relative;
 	margin: 2% auto 2% auto;
-	width: 720px;
+	width: 650px;
 	height: 50px;
 	background: #17072b;
     border-radius: 8px;
@@ -119,6 +126,7 @@ nav{
 	box-shadow:
     0 0 21px #2A2356,
     0 0 151px #2A2356;
+
 }
 nav a{
 	font-size: 20px;
@@ -142,56 +150,66 @@ nav .animation{
 	border-radius: 8px;
 	transition: all .5s ease 0s;
 }
+
+#indicator_samples
+{
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	background: rgba(194, 82, 225, 0.9);
+    box-shadow: 0 0 21px #C252E1;
+	border-radius: 8px;
+}
+
 nav a:nth-child(1)
 {
-	width: 120px;
-    margin-left: .7%;
+	width: 75px;
 }
 
 nav a:nth-child(2)
 {
-	width: 110px;
+	width: 95px;
 }
 nav a:nth-child(3)
 {
-	width: 140px;
+	width: 170px;
 }
 nav a:nth-child(4)
 {
-	width: 190px;
+	width: 155px;
 }
 nav a:nth-child(5)
 {
-	width: 50px;
+	width: 155px;
 }
 
-nav .start-home, a:nth-child(1):hover~.animation
+nav a:nth-child(1):hover~.animation
 {
-	width: 130px;
+	width: 75px;
 	left: 0;
 }
 nav a:nth-child(2):hover~.animation
 {
 	width: 95px;
-	left: 133px;
+	left: 75px;
 }
 
 nav a:nth-child(3):hover~.animation
 {
-	width: 160px;
-	left: 230px;
+	width: 170px;
+	left: 170px;
 }
 
 nav a:nth-child(4):hover~.animation
 {
-	width: 160px;
-	left: 390px;
+	width: 155px;
+	left: 340px;
 }
 
 nav a:nth-child(5):hover~.animation
 {
-	width: 170px;
-	left: 550px;
+	width: 155px;
+	left: 500px;
 }
 /* ===================== SAMPLES PAGE DESIGN ===================== */
 .Upper
