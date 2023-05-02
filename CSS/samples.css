@@ -1,0 +1,487 @@
+
+@font-face 
+{
+    font-family:headings;
+    src: url(../media/fonts/SpaceQuest.otf);
+}
+
+@font-face 
+{
+    font-family: subheadings;
+    src: url(../media/fonts/Square.ttf);
+}
+
+@font-face {
+    font-family: body;
+    src: url(../media/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+/* ===================== NAVIGATION BAR ===================== */
+.container_navbar
+{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button 
+{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: headings;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+}
+
+#button:hover
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+#button::before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #17072b;
+}
+
+#button span
+{
+    position: relative;
+    z-index: 1;
+}
+
+#button i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#button i::before
+{
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #17072b;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#button:hover i::before
+{
+   width: 20px; 
+   left: 20%;
+}
+
+#button i::after
+{
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #17072b;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#button:hover i::after
+{
+   width: 20px; 
+   left: 80%;
+}
+
+/* ===================== NAVIGATION BAR OF SAMPLES ===================== */
+nav{
+	position: relative;
+	margin: 2% auto 2% auto;
+	width: 720px;
+	height: 50px;
+	background: #17072b;
+    border-radius: 8px;
+	font-size: 0;
+	box-shadow:
+    0 0 21px #2A2356,
+    0 0 151px #2A2356;
+}
+nav a{
+	font-size: 20px;
+	font-family: headings;
+	color: #fff;
+	text-decoration: none;
+	line-height: 50px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+
+nav .animation{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	background: rgba(194, 82, 225, 0.9);
+    box-shadow: 0 0 21px #C252E1;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+nav a:nth-child(1)
+{
+	width: 120px;
+    margin-left: .7%;
+}
+
+nav a:nth-child(2)
+{
+	width: 110px;
+}
+nav a:nth-child(3)
+{
+	width: 140px;
+}
+nav a:nth-child(4)
+{
+	width: 190px;
+}
+nav a:nth-child(5)
+{
+	width: 50px;
+}
+
+nav .start-home, a:nth-child(1):hover~.animation
+{
+	width: 130px;
+	left: 0;
+}
+nav a:nth-child(2):hover~.animation
+{
+	width: 95px;
+	left: 133px;
+}
+
+nav a:nth-child(3):hover~.animation
+{
+	width: 160px;
+	left: 230px;
+}
+
+nav a:nth-child(4):hover~.animation
+{
+	width: 160px;
+	left: 390px;
+}
+
+nav a:nth-child(5):hover~.animation
+{
+	width: 170px;
+	left: 550px;
+}
+/* ===================== SAMPLES PAGE DESIGN ===================== */
+.Upper
+{
+    margin: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#title
+{
+    font-family: headings;
+    font-size: 100px;
+    text-align: center;
+    color: #fff;
+    text-shadow:
+    0 0 21px #e0d9f6,
+    0 0 82px #2A2356,
+    0 0 92px #586ae2,
+    0 0 102px #c252e1,
+    0 0 151px #6ecbf5;
+    margin-bottom: 0%;
+}
+
+#subtitle
+{
+    font-family: subheadings;
+    font-size: 25px;
+    color:#0fa;
+    text-align: center;
+}
+
+#subsubtitle
+{
+    font-family: subheadings;
+    font-size: 25px;
+    color:#0fa;
+    text-align: center;
+    justify-content: center;
+}
+
+#subsubtitle::before, #subsubtitle::after
+{
+    content: "";
+    height: 2px;
+    background-color: #0fa;
+    display: block;
+    width: 70%;
+    margin: auto;
+}
+
+/* ===================== PHOTO COLLAGE ===================== */
+.photo_gallery
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+.pic
+{
+    display: flex;
+    position: relative;
+    height: 230px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #586ae2;
+    margin-bottom: 2%;
+    transition: .5s;
+}
+
+.pic img
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+
+/* ===================== PHOTO SLIDE ===================== */
+.slider
+{
+    width: 368px;
+    height: 230px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px #586ae2;
+    margin-left: 35%;
+}
+
+.slides
+{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input
+{
+    display: none;
+}
+
+.slide
+{
+    width:20%;
+    transition: 2s;
+}
+
+.slide img
+{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+
+}
+
+.navigation_manual
+{
+    position: absolute;
+    width: 380px;
+    margin-top: -300px; 
+    display: flex;
+    justify-content: center;
+}
+
+.manual_btn
+{
+    border: 2px solid #fff;
+    box-shadow: 
+    0 0 21px #e0d9f6,
+    0 0 82px #2A2356,
+    0 0 92px #586ae2,
+    0 0 102px #c252e1,
+    0 0 151px #6ecbf5;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.manual_btn:not(:last-child)
+{
+    margin-right: 40px;
+}
+
+.manual_btn:hover
+{
+    background: #fff;
+}
+/* ========================================== */
+#radio1:checked ~ .first{margin-left: 0;}
+#radio2:checked ~ .first{margin-left: -20%;}
+#radio3:checked ~ .first{margin-left: -40%;}
+#radio4:checked ~ .first{margin-left: -60%;}
+
+#radio5:checked ~ .first{margin-left: 0;}
+#radio6:checked ~ .first{margin-left: -20%;}
+#radio7:checked ~ .first{margin-left: -40%;}
+
+#radio8:checked ~ .first{margin-left: 0;}
+#radio9:checked ~ .first{margin-left: -20%;}
+#radio10:checked ~ .first{margin-left: -40%;}
+#radio11:checked ~ .first{margin-left: -60%;}
+/* ========================================== */
+#radio12:checked ~ .first{margin-left: 0;}
+#radio13:checked ~ .first{margin-left: -20%;}
+#radio14:checked ~ .first{margin-left: -40%;}
+#radio15:checked ~ .first{margin-left: -60%;}
+#radio16:checked ~ .first{margin-left: -80%;}
+
+#radio17:checked ~ .first{margin-left: 0;}
+#radio18:checked ~ .first{margin-left: -20%;}
+#radio19:checked ~ .first{margin-left: -40%;}
+#radio20:checked ~ .first{margin-left: -60%;}
+#radio21:checked ~ .first{margin-left: -80%;}
+
+#radio22:checked ~ .first{margin-left: 0;}
+#radio23:checked ~ .first{margin-left: -20%;}
+#radio24:checked ~ .first{margin-left: -40%;}
+#radio25:checked ~ .first{margin-left: -60%;}
+#radio26:checked ~ .first{margin-left: -80%;}
+/* ========================================== */
+#radio27:checked ~ .first{margin-left: 0;}
+#radio28:checked ~ .first{margin-left: -20%;}
+#radio29:checked ~ .first{margin-left: -40%;}
+#radio30:checked ~ .first{margin-left: -60%;}
+
+#radio31:checked ~ .first{margin-left: 0;}
+#radio32:checked ~ .first{margin-left: -20%;}
+#radio33:checked ~ .first{margin-left: -40%;}
+
+#radio34:checked ~ .first{margin-left: 0;}
+#radio35:checked ~ .first{margin-left: -20%;}
+#radio36:checked ~ .first{margin-left: -40%;}
+#radio37:checked ~ .first{margin-left: -60%;}
+#radio38:checked ~ .first{margin-left: -80%;}
+/* ========================================== */
+#radio39:checked ~ .first{margin-left: 0;}
+#radio40:checked ~ .first{margin-left: -20%;}
+#radio41:checked ~ .first{margin-left: -40%;}
+#radio42:checked ~ .first{margin-left: -60%;}
+#radio43:checked ~ .first{margin-left: -80%;}
+
+#radio44:checked ~ .first{margin-left: 0;}
+#radio45:checked ~ .first{margin-left: -20%;}
+#radio46:checked ~ .first{margin-left: -40%;}
+#radio47:checked ~ .first{margin-left: -60%;}
+
+/* ===================== VIDEO COLLAGE ===================== */
+.container_video
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.container_video iframe
+{
+    width: 500px;
+    height: 281px;
+    padding: .5%;
+}
+
+.tiktok-embed
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 570px;
+    width: 80%;
+    padding: 0% 1.5% 2% 1.5%;
+}
+
+/* ===================== REPOSITORY COLLAGE ===================== */
+.language 
+{
+    color: white;
+    background-color: #1f4287;
+    padding: 12px 16px;
+    border-radius: 5px 5px 0 0;
+    text-align: right;
+}
+  
+.code-wrapper 
+{
+    position: relative;
+}
+  
+.code-wrapper pre 
+{
+    background-color: #071e3d;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 0 0 5px 5px;
+}
+
+.container_code
+{
+    display: grid;
+    height: fit-content;
+    width: 50%;
+    background-color: #fff;
+    padding: 2%;
+    margin:0% 25% 2% 25%;
+    overflow-x: auto;
+    border-radius: 12px;
+    padding: 0%;
+}
+  
+.container_code h1
+{
+    font-family: headings;
+    color: #17072b;
+    text-align: center;
+    background-color: #0fa;
+    margin-top: 0%;
+}
+
+.container_code button
+{
+    padding: 1%;
+    width: fit-content;
+    margin: auto auto 2% auto;
+    font-family: headings;
+    background-color: #0fa;
+    border-radius: 12px;
+}

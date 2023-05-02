@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href = "../CSS/features.css">
+    <link rel="icon" type="image/x-icon" href="../media/icon.ico" >
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aira Estur's features</title>
+</head>
+
+<body>
+    <div class="container_navbar"> 
+        <a id = button href="../index.html" style="--clr:#C252E1"><span> Home </span><i></i></a>
+        <a id = button href="skills.html" style="--clr:#C252E1"><span> Skills </span><i></i></a>
+        <a id = button href="samples.html" style="--clr:#C252E1"><span> Sample Works </span><i></i></a>
+        <a id = button href="features.html" style="--clr:#C252E1"><span> Features </span><i></i></a>
+    </div>
+
+    <section> 
+        <img src="../media/stars.png" id="stars">
+        <img src="../media/moon.png" id="moon">
+        <img src="../media/mountains_behind.png" id="mountains_behind">
+        <h1 id= "text"> As Seen On </h1> 
+        <img src="../media/mountains_front.png" id="mountains_front">
+    </section>
+    
+    <div class="sec" id="sec">
+        <h2>The Spectrum / Ang Ispektrum</h2>
+        <p> I used to write on Cielito Zamora Junior High School's official newspaper publication on English and Filipino. </p>
+        <div class="slider">
+            <div class="slide_track"> 
+                <div class="container_journ"> <img src="../media/images/features/article3.jpg"> </div>
+                <div class="container_journ"> <img src="../media/images/features/article1.jpg"> </div>
+                <div class="container_journ"> <img src="../media/images/features/article2.jpg"> </div>
+                <div class="container_journ"> <img src="../media/images/features/article4.jpg"> </div>
+                
+                <div class="container_journ"> <img src="../media/images/features/article3.jpg"> </div>
+                <div class="container_journ"> <img src="../media/images/features/article1.jpg"> </div>
+                <div class="container_journ"> <img src="../media/images/features/article2.jpg"> </div>
+                <div class="container_journ"> <img src="../media/images/features/article4.jpg"> </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sec" id="sec">
+        <h2>Department of Education Caloocan, <br> Module in Science 8 School Year 2019-2020</h2>
+        <p> My graphic illustration was used in a Science module distributed in Caloocan City. </p>
+        <div class="container_deped">
+            <img id= "article" src="../media/images/features/article6.png">
+            <img id= "article" src="../media/images/features/article7.png">
+        </div>
+    </div>
+
+    <script>
+        let stars = document.getElementById("stars");
+        let moon = document.getElementById("moon");
+        let mountains_behind = document.getElementById("mountains_behind");
+        let text = document.getElementById("text");
+        let mountains_front = document.getElementById("mountains_front");
+        
+        window.addEventListener("scroll",function()
+        {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + "px";
+            moon.style.top = value * 1.25 + "px";
+            mountains_behind.style.top = value * 0.5 + "px";
+            text.style.marginRight= value * 4 + "px";
+            text.style.marginTop= value * 1.5 + "px";
+            mountains_front.style.top = value * 0 + "px";
+        })
+    </script>
+    </div>
+
+</body>
+</html>

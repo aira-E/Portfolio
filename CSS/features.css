@@ -1,0 +1,296 @@
+@font-face 
+{
+    font-family:headings;
+    src: url(../media/fonts/SpaceQuest.otf);
+}
+
+@font-face 
+{
+    font-family: subheadings;
+    src: url(../media/fonts/Square.ttf);
+}
+
+@font-face {
+    font-family: body;
+    src: url(../media/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+*
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+}
+
+/* ===================== NAVIGATION BAR ===================== */
+.container_navbar
+{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#button 
+{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-family: headings;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+
+#button:hover
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+
+#button::before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #2c1257;
+}
+
+#button span
+{
+    position: relative;
+    z-index: 1;
+}
+
+#button i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+#button i::before
+{
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #2c1257;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#button:hover i::before
+{
+   width: 20px; 
+   left: 20%;
+}
+
+#button i::after
+{
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #2c1257;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+#button:hover i::after
+{
+   width: 20px; 
+   left: 80%;
+}
+
+/* ===================== FEATURE DESIGN ===================== */
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before
+{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#2b1055, transparent);
+    z-index: 1000;
+}
+
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+    pointer-events: none;
+}
+
+section img#moon
+{
+    mix-blend-mode: screen;
+}
+
+section img#mountains_front
+{
+    z-index: 10;
+}
+
+#text
+{
+    font-family: headings;
+    position: absolute;   
+    right: -350px;
+    margin-top: 0%;
+    color: #fff;
+    text-shadow:
+    0 0 21px #e0d9f6,
+    0 0 82px #2A2356,
+    0 0 92px #586ae2,
+    0 0 102px #c252e1,
+    0 0 151px #6ecbf5;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background:#2b1055;
+}
+
+.sec h2
+{
+    font-family: subheadings;
+    font-size: 40px;
+    margin-top: 0%;
+    color:#0fa;
+}
+
+.sec p
+{
+    font-family: body;
+    font-size: 25px;
+    color: #fff;
+}
+
+.slider
+{
+    height: 500px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 0%;
+}
+
+.slide_track
+{
+    display: flex;
+    width: calc(500px * 8);
+    animation: scroll 40s linear infinite;
+    margin-bottom: 0%;
+}
+
+@keyframes scroll 
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(calc(-500px*4));
+    }
+}
+
+.container_journ
+{
+    height: 200px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+
+.container_journ img
+{
+    width: 100%;
+}
+
+.container_journ img:hover
+{
+    transform: translateZ(20px);
+    transition: transform 1s;
+}
+
+.slider::before
+{
+    left: 0;
+    top: 0;
+}
+
+.slider::after
+{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180 deg);
+}
+
+.container_deped
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
+#article
+{
+    width: 35%;
+    height: 35%;
+    border-radius: 2%;
+    mix-blend-mode: lighten;
+    padding: .5%;
+}
+
+
+
+
+
+
+

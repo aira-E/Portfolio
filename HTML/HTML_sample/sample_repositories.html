@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href = "../../CSS/samples.css">
+        <script src="../../JavaScript/button_copy.js"></script>
+        <link rel="icon" type="image/x-icon" href="../../media/icon.ico" >
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aira Estur's Samples</title>
+        <body style="background: #17072B">
+    </head>
+<body>
+    <div class="container_navbar"> 
+        <a id = button href="../../index.html" style="--clr:#C252E1"><span> Home </span><i></i></a>
+        <a id = button href="../../HTML/skills.html" style="--clr:#C252E1"><span> Skills </span><i></i></a>
+        <a id = button href="../../HTML/samples.html" style="--clr:#C252E1"><span> Sample Works </span><i></i></a>
+        <a id = button href="../../HTML/features.html" style="--clr:#C252E1"><span> Features </span><i></i></a>
+    </div>
+
+    <div class="Upper">
+        <div>
+            <p id= "title"> <u> Sample Works</u> </p>
+            <p id="subtitle"> Here is the compilation of my best works! </p>
+        </div>
+    </div>
+
+    <div class="Middle">
+        <nav> 
+            <a href="../samples.html">Artworks</a>
+            <a href="sample_musics.html">Musics</a>
+            <a href="sample_photographs.html">Photographs</a>
+            <a href="sample_repositories.html">Repositories</a>
+            <a href="sample_videographs.html">Videographs</a>
+            <div class="animation start-home"></div>
+        </nav>
+
+        <div class="container_code">
+            <h1>  Sample Size Calculator  </h1>  
+            <pre>
+                <code id="code" class="language-css">
+                # Sample Size Calculator
+                confidence_level = int (input ("Confidence Level (in percentage form): "))
+                precision = float (input ("Precision (in decimal form): "))
+                if confidence_level == 90:
+                    z_value = 1.645
+                elif confidence_level == 95:
+                    z_value = 1.96
+                elif confidence_level == 99:
+                    z_value = 2.576
+                m = 0.05
+                sample_size = ( z_value * z_value ) * precision * ( 1 - precision ) / (m * m)
+                print (f"sample size: {sample_size}")
+                </code>
+            </pre>
+            <button id="copy-button">Copy</button>
+        </div>
+    </div>
+</body>
+</html>
+
