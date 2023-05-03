@@ -4,7 +4,7 @@
 * Project Features:
 1. Subpages - The website has multiple/nested pages
 2. Indicator - The website indicates where specific page you are at
-3. Social Media Linking - The website is embedded with multiple active links using i
+3. Social Media Linking - The website is embedded with multiple active links
 4. Animations - The website offers some basic animation such as; scrolling, float, and shrink
 5. Buttons - The website has functioning buttons such as; previous, next, and copy buttons
 6. Sliders - The website has sliders using radio input tag
