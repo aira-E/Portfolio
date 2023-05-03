@@ -51,7 +51,7 @@
     content: '';
     position: absolute;
     inset: 2px;
-    background: #100f10;
+    background: #17072b;
 }
 
 .button span
@@ -76,7 +76,7 @@
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #100f10;
+    background: #17072b;
     transform: translateX(-50%);
     transition: 0.5s;
 }
@@ -96,7 +96,7 @@
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #100f10;
+    background: #17072b;
     transform: translateX(-50%);
     transition: 0.5s;
 }
