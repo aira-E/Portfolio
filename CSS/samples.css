@@ -51,7 +51,7 @@
     content: '';
     position: absolute;
     inset: 2px;
-    background: #17072b;
+    background: #100f10;
 }
 
 .button span
@@ -76,7 +76,7 @@
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
@@ -96,7 +96,7 @@
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
@@ -274,7 +274,8 @@ nav a:nth-child(5):hover~.animation
     margin-bottom: 2%;
 }
 
-.pic
+/**
+.p
 {
     display: flex;
     position: relative;
@@ -283,7 +284,7 @@ nav a:nth-child(5):hover~.animation
     box-shadow: 2px 2px 4px #586ae2;
     margin-bottom: 2%;
     transition: .5s;
-}
+} **/
 
 .pic img
 {

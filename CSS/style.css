@@ -208,3 +208,18 @@
     text-align: center;
     color: #fff;
 }
+
+footer
+{
+    background-color: #c252e1;
+    text-align: center;
+    color: #100f10;
+    font-family: subheadings;
+    font-size: 15px;
+    padding: .5%;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0%;
+    margin-bottom: 0.5%;
+}

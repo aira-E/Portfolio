@@ -62,7 +62,7 @@ body
     content: '';
     position: absolute;
     inset: 2px;
-    background: #2c1257;
+    background: #100f10;
 }
 
 .button span
@@ -87,7 +87,7 @@ body
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #2c1257;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
@@ -107,7 +107,7 @@ body
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #2c1257;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
@@ -293,6 +293,25 @@ section img#mountains_front
     border-radius: 2%;
     mix-blend-mode: lighten;
     padding: .5%;
+}
+
+.container_smm
+{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+#socialmedia_management
+{
+    width: 80%;
+    border-radius: 50%;
+}
+
+#socialmedia_management:hover
+{
+    width: 100%;
+    border-color: #c252e1;
 }
 
 

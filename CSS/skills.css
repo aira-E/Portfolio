@@ -85,7 +85,7 @@ nav ul
     content: '';
     position: absolute;
     inset: 2px;
-    background: #17072b;
+    background: #100f10;
 }
 
 .button span
@@ -110,7 +110,7 @@ nav ul
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
@@ -130,7 +130,7 @@ nav ul
     width: 10px;
     height: 5px;
     border: 2px solid var(--clr);
-    background: #17072b;
+    background: #100f10;
     transform: translateX(-50%);
     transition: 0.5s;
 }
