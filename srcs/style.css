@@ -1,0 +1,378 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/********** UNIVERSAL CODE **********/
+/** to center div **/
+.landingpage, .spaceship_wrapper, .republikha, .contact_wrapper
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/** to align text **/
+.projects_wrapper h1, .republikha_wrapper h1
+{
+    text-align: center;
+}
+
+/** to color wrappers **/
+.landingpage_wrapper,.profile_wrapper, .projects_wrapper, .contact_wrapper, .republikha_wrapper, .last_section
+{
+    background-color: #17072B;
+    color: #fff;
+}
+
+/** to customize icons **/
+.socials a
+{
+    color: #00D6ED;
+    font-size: 1.5rem;
+    text-decoration: none; 
+    gap: 20px;
+}
+
+.socials a :hover
+{
+    color: #fff;
+}
+
+/** to set the picture sizes **/
+#profile, .republikha img
+{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+/** to set the text sizes **/
+.header p, .republikha_profile p
+{
+    font-size: 1.2rem;
+
+}
+
+/********** LANDING SECTION **********/
+.landingpage_wrapper 
+{
+    height: 100vh;
+    background-image: url(../srcs/pictures/Bg.jpg);
+    position: relative;
+    background-size: cover;  
+}
+
+#profile_artist
+{
+    position: absolute;
+    top: 25%; 
+    width: 300px;
+    height: 300px;
+    animation: float 3s ease-in-out infinite; 
+}
+
+@keyframes float 
+{
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Move up by 20px */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.landingpage h1
+{
+    color: #002938;
+    top: 60%; 
+    position: absolute;
+    text-decoration: underline; 
+    font-size: 4rem;
+}
+
+.landingpage h2
+{
+    color: #fff; 
+    top: 68%; 
+    position: absolute;
+}
+
+.box
+{
+    opacity: 0;
+}
+.description1{
+    animation:ani1 5s infinite;
+}
+
+.description2{
+    animation:ani2 5s infinite;
+}
+
+@keyframes ani1{
+    0%{
+        opacity: 0;;
+    }
+
+    40%{
+        opacity: 1;;
+    }
+
+    60%{
+        opacity: 0;;
+    }
+}
+
+@keyframes ani2{
+    60%{
+        opacity: 0;;
+    }
+
+    80%{
+        opacity: 1;;
+    }
+
+    100%{
+        opacity: 0;;
+    }
+}
+
+/********** PROFILE SECTION **********/
+.header, #certifications_header
+{
+    display: flex;
+}
+
+.profile
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    align-items: center;
+    margin: 0px 50px 0px 50px;
+}
+
+.header_tabs
+{
+    z-index: 2;
+}
+
+/********** PROJECT SECTION **********/
+.projects_wrapper 
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.projects_wrapper .btn
+{
+    width: 100%;
+}
+
+.cards-wrapper 
+{
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+}
+
+.card 
+{
+    flex: 1; 
+    margin: 0 0.5em; 
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column; 
+}
+
+.card img 
+{
+    width: 100%; 
+    max-height: 11em; 
+    object-fit: cover; 
+}
+
+.card-body 
+{
+    flex: 1;
+}
+
+.card-footer 
+{
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.carousel-inner 
+{
+    padding: 1em;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    z-index: 1; 
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: transparent; 
+}
+
+/********** REPUBLIKHA SECTION **********/
+.republikha
+{
+    margin: 0px 50px 0px 50px;
+}
+
+
+/********** LAST SECTION **********/
+.last_section
+{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap:20px;
+}
+
+/********** FEATURES SECTION **********/
+.feature_wrapper 
+{
+    height: 70vh;
+    width: 100%;
+    background-image: url(../srcs/pictures/feature_bg.png);
+    position: relative;
+    background-size:contain;  
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: left;
+}
+
+.feature_wrapper img
+{
+    margin-top: 180px;
+    position: absolute;
+    width: 450px;
+    height: auto;
+}
+
+/********** CONTACT SECTION **********/
+.contact_wrapper
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#contact_card
+{
+    display: flex;
+    width: max-content;
+    height: fit-content;
+}
+.contact_card_info
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#qr
+{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+/********** MEDIA SCREEN **********/
+@media screen and (max-width: 768px)
+{
+    .profile, .header
+    {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+    #profile_artist
+    {
+        width: 200px;
+        height: 200px;
+    }
+
+    .landingpage h1 
+    {
+    top: 50%; 
+    }
+
+    .landingpage h2
+    {
+    top: 60%; 
+    }
+
+    .republikha
+    {
+        flex-direction: column;
+    }
+
+    video
+    {
+    width: 100%;
+    height: auto;
+    }
+
+    .header h1, .header p, .republikha_profile h2, .republikha_profile #icon, .republikha_profile p, .contact_card_info h1
+    {
+        text-align: center;
+    }
+
+    .socials
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .last_section, #contact_card
+    {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .feature_wrapper 
+    {
+    width: 150%;
+    }
+
+    .feature_wrapper img
+    {
+    margin-top: 130px;
+    width: 200px;
+    height: auto;
+    margin-left: 100px;
+    }
+
+}
+
+@media (min-width: 768px) 
+{
+    .card img {
+      height: 11em;
+    }
+
+}
+
+
+
