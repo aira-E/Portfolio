@@ -1,4 +1,6 @@
+/** fonts **/
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend:wght@100..900&family=Lilita+One&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -8,65 +10,71 @@
 
 /********** UNIVERSAL CODE **********/
 /** to center div **/
-.landingpage, .spaceship_wrapper, .republikha, .contact_wrapper
-{
+.landingpage, .spaceship_wrapper, .republikha, .contact_wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/** to align text **/
-.projects_wrapper h1, .republikha_wrapper h1
-{
+/** to customize text **/
+.projects_wrapper h1, .republikha_wrapper h1, .contact_wrapper h1{
     text-align: center;
+    font-family: "Lilita One";
+    color: #00D6ED;
+}
+
+.header h2, .republikha_profile h2, .header_tabs a{
+    font-family: "Archivo Black";
+    color: #F5FCFF;
+}
+
+.header p, .republikha_profile p, .contact_this p{
+    font-family: "Lexend";
 }
 
 /** to color wrappers **/
-.landingpage_wrapper,.profile_wrapper, .projects_wrapper, .contact_wrapper, .republikha_wrapper, .last_section
-{
+.landingpage_wrapper,.profile_wrapper, .projects_wrapper, .republikha_wrapper, .contact_wrapper, .last_section{
     background-color: #17072B;
     color: #fff;
 }
 
 /** to customize icons **/
-.socials a
-{
+.socials a{
     color: #00D6ED;
     font-size: 1.5rem;
     text-decoration: none; 
     gap: 20px;
 }
 
-.socials a :hover
-{
+.socials a :hover{
     color: #fff;
 }
 
 /** to set the picture sizes **/
-#profile, .republikha img
-{
+#profile, .republikha img, #qr{
     width: 200px;
     height: 200px;
     margin: 10px;
 }
 /** to set the text sizes **/
-.header p, .republikha_profile p
-{
+.header p, .republikha_profile p{
     font-size: 1.2rem;
 
 }
 
 /********** LANDING SECTION **********/
-.landingpage_wrapper 
-{
+.landingpage_wrapper {
     height: 100vh;
     background-image: url(../srcs/pictures/Bg.jpg);
     position: relative;
     background-size: cover;  
 }
 
-#profile_artist
-{
+.landingpage h1{
+    font-family:"Lilita One";
+}
+
+#profile_artist{
     position: absolute;
     top: 25%; 
     width: 300px;
@@ -74,8 +82,7 @@
     animation: float 3s ease-in-out infinite; 
 }
 
-@keyframes float 
-{
+@keyframes float {
     0% {
         transform: translateY(0);
     }
@@ -87,8 +94,7 @@
     }
 }
 
-.landingpage h1
-{
+.landingpage h1{
     color: #002938;
     top: 60%; 
     position: absolute;
@@ -96,17 +102,16 @@
     font-size: 4rem;
 }
 
-.landingpage h2
-{
+.landingpage h2{
     color: #fff; 
     top: 68%; 
     position: absolute;
 }
 
-.box
-{
+.box{
     opacity: 0;
 }
+
 .description1{
     animation:ani1 5s infinite;
 }
@@ -144,13 +149,15 @@
 }
 
 /********** PROFILE SECTION **********/
-.header, #certifications_header
-{
+.header{
     display: flex;
 }
+/**
+#certifications_header{
+    display: flex;
+}**/
 
-.profile
-{
+.profile{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap:20px;
@@ -158,33 +165,28 @@
     margin: 0px 50px 0px 50px;
 }
 
-.header_tabs
-{
+.header, .header_tabs{
     z-index: 2;
 }
 
 /********** PROJECT SECTION **********/
-.projects_wrapper 
-{
+.projects_wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
 }
 
-.projects_wrapper .btn
-{
+.projects_wrapper .btn{
     width: 100%;
 }
 
-.cards-wrapper 
-{
+.cards-wrapper {
     display: flex;
     justify-content: space-between; 
     width: 100%;
 }
 
-.card 
-{
+.card {
     flex: 1; 
     margin: 0 0.5em; 
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
@@ -194,25 +196,21 @@
     flex-direction: column; 
 }
 
-.card img 
-{
+.card img {
     width: 100%; 
     max-height: 11em; 
     object-fit: cover; 
 }
 
-.card-body 
-{
+.card-body {
     flex: 1;
 }
 
-.card-footer 
-{
+.card-footer {
     margin-top: auto; /* Pushes the footer to the bottom */
 }
 
-.carousel-inner 
-{
+.carousel-inner {
     padding: 1em;
 }
 
@@ -233,135 +231,85 @@
 }
 
 /********** REPUBLIKHA SECTION **********/
-.republikha
-{
+.republikha{
     margin: 0px 50px 0px 50px;
 }
 
 
 /********** LAST SECTION **********/
-.last_section
-{
+.last_section{
     align-items: center;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap:20px;
 }
 
 /********** FEATURES SECTION **********/
-.feature_wrapper 
-{
-    height: 70vh;
+#feature_bg{
     width: 100%;
-    background-image: url(../srcs/pictures/feature_bg.png);
-    position: relative;
-    background-size:contain;  
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: left;
-}
-
-.feature_wrapper img
-{
-    margin-top: 180px;
-    position: absolute;
-    width: 450px;
-    height: auto;
 }
 
 /********** CONTACT SECTION **********/
-.contact_wrapper
-{
+.contact_wrapper{
     display: flex;
     flex-direction: column;
 }
 
-#contact_card
-{
+#contact_card{
     display: flex;
     width: max-content;
     height: fit-content;
 }
-.contact_card_info
-{
+
+.contact_card_info{
     display: flex;
     flex-direction: column;
 }
 
-#qr
-{
-    width: 200px;
-    height: 200px;
-    margin: 10px;
+.contact_this {
+    display: flex;
+    align-items: center;
 }
-
+    
+.contact_this p, .contact_this i {
+    margin: 0; 
+    vertical-align: middle; 
+}
 /********** MEDIA SCREEN **********/
 @media screen and (max-width: 768px)
 {
-    .profile, .header
-    {
+    .profile, .header, .socials{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     }
 
-    #profile_artist
-    {
+    #profile_artist{
         width: 200px;
         height: 200px;
     }
 
-    .landingpage h1 
-    {
+    .landingpage h1 {
     top: 50%; 
     }
 
-    .landingpage h2
-    {
+    .landingpage h2{
     top: 60%; 
     }
 
-    .republikha
-    {
-        flex-direction: column;
-    }
-
-    video
-    {
+    video{
     width: 100%;
     height: auto;
     }
 
-    .header h1, .header p, .republikha_profile h2, .republikha_profile #icon, .republikha_profile p, .contact_card_info h1
-    {
+    .header h2, .header p, .republikha_profile h2, 
+    .republikha_profile #icon, .republikha_profile p, 
+    .contact_card_info h2{
         text-align: center;
     }
 
-    .socials
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .last_section, #contact_card
-    {
-        align-items: center;
+    .last_section, #contact_card,  .republikha{
         display: flex;
         flex-direction: column;
-    }
-
-    .feature_wrapper 
-    {
-    width: 150%;
-    }
-
-    .feature_wrapper img
-    {
-    margin-top: 130px;
-    width: 200px;
-    height: auto;
-    margin-left: 100px;
     }
 
 }
@@ -371,7 +319,6 @@
     .card img {
       height: 11em;
     }
-
 }
 
 
