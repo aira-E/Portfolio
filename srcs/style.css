@@ -169,11 +169,17 @@
     z-index: 2;
 }
 
+.company_logos
+{
+    height: 25px;
+}
+
 /********** PROJECT SECTION **********/
 .projects_wrapper {
     position: relative;
     width: 100%;
     overflow: hidden;
+    padding: 40px;
 }
 
 .projects_wrapper .btn{
@@ -210,25 +216,6 @@
     margin-top: auto; /* Pushes the footer to the bottom */
 }
 
-.carousel-inner {
-    padding: 1em;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    z-index: 1; 
-    background-color: #e1e1e1;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: transparent; 
-}
 
 /********** REPUBLIKHA SECTION **********/
 .republikha{
